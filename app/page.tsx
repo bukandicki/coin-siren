@@ -4,6 +4,7 @@ import Image from 'next/image';
 import HeroBackground from '@/public/images/hero-background.png';
 
 import './Home.styles.css';
+import Tooltip from '@/components/Tooltip';
 
 export default async function Home() {
   const [users, benefits, highlights] = await Promise.all([getUsers(), getBenefits(), getHighlights()]);
@@ -22,9 +23,9 @@ export default async function Home() {
 
         <div className="Hero__information">
           <div className="Hero__headline">
-            <div className="Hero__tooltip">
-              <span>풀타임, 파트타임</span>
-            </div>
+            <Tooltip position="left" className="Hero__tooltip">
+              풀타임, 파트타임
+            </Tooltip>
 
             <h1>
               <p>최고의 실력을 가진</p>

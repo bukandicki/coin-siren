@@ -18,7 +18,8 @@
 }
 
 .Hero__tooltip {
-  animation: fadeInUp 500ms;
+  @apply text-cs-teal mb-[25px];
+  animation: fadeIn 500ms;
   animation-fill-mode: both;
   animation-duration: 500ms;
   animation-delay: 800ms;
