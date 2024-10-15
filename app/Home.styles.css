@@ -1,4 +1,5 @@
 .Home__hero {
+  @apply pt-40;
   @apply w-full h-[914px] bg-cs-gradient relative;
 }
 
@@ -8,5 +9,91 @@
 
 .Hero__information,
 .Hero__highlight {
+  @apply container;
   @apply relative z-10;
+}
+
+.Hero__information {
+  @apply mb-[60px];
+}
+
+.Hero__tooltip {
+  animation: fadeInUp 500ms;
+  animation-fill-mode: both;
+  animation-duration: 500ms;
+  animation-delay: 800ms;
+}
+
+.Hero__information h1,
+.Hero__information h2,
+.Hero__information h3 {
+  @apply text-white;
+  animation: fadeInUp 500ms both;
+}
+
+.Hero__information h1 {
+  @apply text-5xl;
+}
+
+.Hero__information h2 {
+  @apply text-2xl;
+  @apply mb-6 mt-4;
+  @apply text-white/90;
+}
+
+.Hero__information h3 {
+  @apply text-lg;
+  @apply mb-[60px];
+}
+
+.Hero__benefits {
+  @apply flex;
+  @apply gap-12;
+  @apply mb-[60px];
+  animation: fadeInUp 500ms;
+}
+
+.Benefits__item {
+  @apply max-w-[161px];
+  @apply before:block before:w-[129px] before:h-[1px] before:mb-2 before:bg-white;
+}
+
+.Benefits__item h4 {
+  @apply text-white;
+  @apply text-lg;
+  @apply mb-2;
+}
+
+.Benefits__item p {
+  @apply text-white/80;
+}
+
+.Hero__highlight {
+  animation: fadeInUp 500ms;
+}
+
+.Highlight__lists {
+  @apply flex;
+  @apply gap-[10px];
+}
+
+.Highlight__item {
+  @apply flex;
+  @apply flex-none;
+  @apply items-center;
+  @apply w-[332px];
+  @apply bg-white/20;
+  @apply p-4;
+  @apply rounded-xl;
+  @apply flex-nowrap;
+}
+
+.Highlight__item div {
+  @apply p-3;
+  @apply mr-6;
+  @apply bg-white/40;
+  @apply rounded-lg;
+}
+.Highlight__item h4 {
+  @apply text-2xl text-white;
 }
