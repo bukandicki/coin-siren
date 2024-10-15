@@ -1,5 +1,5 @@
 import './Footer.styles.css';
 
 export default function Footer() {
-  return <footer></footer>;
+  return <footer className="Footer"></footer>;
 }

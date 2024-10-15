@@ -1,0 +1,94 @@
+.Header {
+  @apply container;
+  @apply left-1/2;
+  @apply -translate-x-1/2;
+  @apply absolute;
+  @apply z-20;
+  @apply h-[60px];
+  @apply flex;
+  @apply justify-between;
+  @apply items-center;
+  @apply w-full;
+}
+
+.Nav__lists {
+  @apply flex;
+  @apply items-center;
+  @apply gap-x-[60px];
+}
+
+.Nav__dropdown {
+  @apply relative;
+}
+
+.Dropdown {
+  @apply absolute;
+  @apply top-10;
+  @apply text-sm;
+  @apply border-l;
+  @apply border-r;
+  @apply border-b-4;
+  @apply left-0;
+  @apply invisible;
+  @apply opacity-0;
+  @apply translate-y-11;
+  @apply bg-white;
+  @apply transition-all;
+  @apply rounded-lg;
+  @apply before:absolute before:-top-10 before:block before:w-full before:h-10;
+  box-shadow:
+    0px 4px 6px -2px #10182808,
+    0px 12px 16px -4px #10182814;
+}
+
+.Nav__dropdown--opened .Dropdown {
+  @apply visible opacity-100 translate-y-0;
+}
+
+.Nav__dropdown--opened .Dropdown__title img {
+  @apply rotate-0;
+}
+
+.Dropdown__title {
+  @apply flex;
+  @apply items-center;
+  @apply gap-2;
+  @apply cursor-pointer;
+}
+
+.Dropdown__title img {
+  @apply -rotate-180;
+  @apply transition-transform;
+}
+
+.Dropdown__title,
+.Nav__link {
+  @apply text-white;
+}
+
+.Dropdown__item {
+  @apply w-full;
+}
+
+.Dropdown__item:not(:last-child) {
+  @apply border-b;
+}
+
+.Dropdown__link {
+  @apply font-inter;
+  @apply font-medium;
+  @apply block;
+  @apply whitespace-nowrap;
+  @apply py-[10px];
+  @apply px-4;
+  @apply transition-all;
+  @apply hover:font-bold;
+}
+
+.Header__cta {
+  @apply text-cs-blue;
+  @apply py-[6px];
+  @apply w-[104px];
+  @apply rounded-lg;
+  @apply bg-white;
+}
