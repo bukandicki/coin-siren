@@ -29,14 +29,36 @@
   @apply border-r;
   @apply border-b-4;
   @apply left-0;
+  @apply invisible;
+  @apply opacity-0;
+  @apply translate-y-11;
   @apply bg-white;
+  @apply transition-all;
   @apply rounded-lg;
+  @apply before:absolute before:-top-10 before:block before:w-full before:h-10;
+  box-shadow:
+    0px 4px 6px -2px #10182808,
+    0px 12px 16px -4px #10182814;
+}
+
+.Nav__dropdown--opened .Dropdown {
+  @apply visible opacity-100 translate-y-0;
+}
+
+.Nav__dropdown--opened .Dropdown__title img {
+  @apply rotate-0;
 }
 
 .Dropdown__title {
   @apply flex;
   @apply items-center;
   @apply gap-2;
+  @apply cursor-pointer;
+}
+
+.Dropdown__title img {
+  @apply -rotate-180;
+  @apply transition-transform;
 }
 
 .Dropdown__title,

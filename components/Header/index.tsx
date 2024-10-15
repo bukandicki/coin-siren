@@ -1,3 +1,6 @@
+'use client';
+
+import { useEffect } from 'react';
 import { MENUS } from '@/lib/constants';
 
 import Image from 'next/image';
@@ -6,6 +9,26 @@ import Link from 'next/link';
 import './Header.styles.css';
 
 export default function Header() {
+  const handleToggleDropdown = (e: MouseEvent) => {
+    const type = e.type;
+    const target = e.target as HTMLDivElement;
+
+    if (type === 'mouseenter') target.classList.add('Nav__dropdown--opened');
+    else target.classList.remove('Nav__dropdown--opened');
+  };
+
+  useEffect(() => {
+    const nav_dropdown_el = document.querySelector('.Nav__dropdown') as HTMLDivElement;
+
+    nav_dropdown_el.addEventListener('mouseenter', handleToggleDropdown);
+    nav_dropdown_el.addEventListener('mouseleave', handleToggleDropdown);
+
+    return () => {
+      nav_dropdown_el.removeEventListener('mouseenter', handleToggleDropdown);
+      nav_dropdown_el.removeEventListener('mouseleave', handleToggleDropdown);
+    };
+  }, []);
+
   return (
     <header className="Header">
       <Image className="Header__logo" src="/svgs/logo.svg" width={144} height={21} alt="Hyperhire Logo" />
