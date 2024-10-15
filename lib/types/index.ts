@@ -1,5 +1,3 @@
-import { NextResponse } from 'next/server';
-
 export type USER_TYPE = {
   id: number;
   name: string;
@@ -17,9 +15,6 @@ export type BENEFIT_TYPE = {
 
 export type HIGHLIGHT_TYPE = {
   id: number;
-  name: string;
-  experiences: string;
-  roles: string;
+  title: string;
+  icon: string;
 };
-
-export type API_RESPONSE<T> = NextResponse<T> | NextResponse<{ error: string }>;
