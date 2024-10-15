@@ -1,2 +1,12 @@
-.Home {
+.Home__hero {
+  @apply w-full h-[914px] bg-cs-gradient relative;
+}
+
+.Hero__background {
+  @apply opacity-80 z-0 object-cover mix-blend-color-burn;
+}
+
+.Hero__information,
+.Hero__highlight {
+  @apply relative z-10;
 }
