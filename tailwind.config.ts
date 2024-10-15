@@ -23,6 +23,7 @@ const config: Config = {
         'cs-yellow': '#FBFF23',
         'cs-blue': '#4A77FF',
         'cs-light-blue': '#8BC4FF',
+        'cs-teal': '#40E2E8',
         'cs-dark': '#343741',
         'cs-slate': '#344054',
         'cs-light-slate': '#24252F',
