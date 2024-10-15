@@ -1,7 +1,5 @@
-import "./Header.styles.css"
+import './Header.styles.css';
 
 export default function Header() {
-  return (
-    <header></header>
-  )
+  return <header></header>;
 }
