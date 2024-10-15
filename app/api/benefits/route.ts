@@ -1,9 +1,10 @@
 import { NextResponse } from 'next/server';
+import { API_RESPONSE, BENEFIT_TYPE } from '@/lib/types';
 
 import fs from 'fs';
 import path from 'path';
 
-export async function GET() {
+export async function GET(): Promise<API_RESPONSE<BENEFIT_TYPE>> {
   try {
     const filePath = path.join(process.cwd(), 'lib/json', 'benefits.json');
     const fileContents = await fs.promises.readFile(filePath, 'utf8');

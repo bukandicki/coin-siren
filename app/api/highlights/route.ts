@@ -1,9 +1,10 @@
 import { NextResponse } from 'next/server';
+import { API_RESPONSE, HIGHLIGHT_TYPE } from '@/lib/types';
 
 import fs from 'fs';
 import path from 'path';
 
-export async function GET() {
+export async function GET(): Promise<API_RESPONSE<HIGHLIGHT_TYPE>> {
   try {
     const filePath = path.join(process.cwd(), 'lib/json', 'highlights.json');
 
