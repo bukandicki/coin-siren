@@ -3,24 +3,32 @@
     "id": 1,
     "name": "Abhishek Gupta",
     "experiences": 2,
+    "country": "/flag.png",
+    "avatar": "/avatar.png",
     "roles": ["마케팅 콘텐츠 제작", "인스타그램 관리", "트위터 관리", "블로그 글 작성"]
   },
   {
     "id": 2,
     "name": "Abhishek Gupta",
     "experiences": 5,
+    "country": "/flag.png",
+    "avatar": "/avatar.png",
     "roles": ["마케팅 콘텐츠 제작", "인스타그램 관리", "트위터 관리", "블로그 글 작성"]
   },
   {
     "id": 3,
     "name": "Abhishek Gupta",
     "experiences": 1,
+    "country": "/flag.png",
+    "avatar": "/avatar.png",
     "roles": ["마케팅 콘텐츠 제작", "인스타그램 관리", "트위터 관리", "블로그 글 작성"]
   },
   {
     "id": 4,
     "name": "Abhishek Gupta",
     "experiences": 4,
+    "country": "/flag.png",
+    "avatar": "/avatar.png",
     "roles": ["마케팅 콘텐츠 제작", "인스타그램 관리", "트위터 관리", "블로그 글 작성"]
   }
 ]
