@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "title": "마케팅",
+    "icon": "/svgs/icon-marketing.svg"
+  },
+  {
+    "id": 2,
+    "title": "퍼블리셔",
+    "icon": "/svgs/icon-image.svg"
+  },
+  {
+    "id": 3,
+    "title": "캐드원(제도사)",
+    "icon": "/svgs/icon-box.svg"
+  },
+  {
+    "id": 4,
+    "title": "해외 세일즈",
+    "icon": "/svgs/icon-target.svg"
+  },
+  {
+    "id": 5,
+    "title": "해외 CS",
+    "icon": "/svgs/icon-call.svg"
+  }
+]
