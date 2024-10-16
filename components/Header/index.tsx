@@ -8,17 +8,26 @@ import Link from 'next/link';
 
 import './Header.styles.css';
 
+let timeout: NodeJS.Timeout;
+
 export default function Header() {
   const handleToggleDropdown = (e: MouseEvent) => {
     const type = e.type;
     const target = e.target as HTMLDivElement;
 
-    if (type === 'mouseenter') target.classList.add('Nav__dropdown--opened');
-    else target.classList.remove('Nav__dropdown--opened');
+    if (type === 'mouseenter') {
+      target.setAttribute('data-opened', 'true');
+    } else {
+      clearTimeout(timeout);
+
+      timeout = setTimeout(() => {
+        target.setAttribute('data-opened', 'false');
+      }, 350);
+    }
   };
 
   useEffect(() => {
-    const nav_dropdown_el = document.querySelector('.Nav__dropdown') as HTMLDivElement;
+    const nav_dropdown_el = document.querySelector('.Nav__dropdown[data-opened="false"]') as HTMLDivElement;
 
     nav_dropdown_el.addEventListener('mouseenter', handleToggleDropdown);
     nav_dropdown_el.addEventListener('mouseleave', handleToggleDropdown);
@@ -38,7 +47,7 @@ export default function Header() {
           {MENUS.map((menu) => (
             <li className="Nav__item" key={menu.title}>
               {menu.sub_items.length ? (
-                <div className="Nav__dropdown">
+                <div className="Nav__dropdown" data-opened="false">
                   <div className="Dropdown__title">
                     <span>{menu.title}</span>
 
