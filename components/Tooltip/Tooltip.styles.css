@@ -1,0 +1,32 @@
+.Tooltip {
+  @apply py-2;
+  @apply px-4;
+  @apply rounded-lg;
+  @apply w-fit;
+  @apply text-lg;
+  @apply relative;
+  @apply bg-white;
+  @apply before:absolute;
+  @apply before:block;
+  @apply before:w-8 before:h-6;
+  @apply before:bg-white;
+  @apply before:-z-10;
+  @apply before:-bottom-3;
+}
+
+.Tooltip::before {
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+}
+
+.Tooltip--left {
+  @apply before:left-2;
+}
+
+.Tooltip--center {
+  @apply before:left-1/2;
+  @apply before:-translate-x-1/2;
+}
+
+.Tooltip--right {
+  @apply before:right-2;
+}

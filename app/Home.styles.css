@@ -18,10 +18,12 @@
 }
 
 .Hero__tooltip {
-  animation: fadeInUp 500ms;
+  @apply text-cs-teal mb-[25px];
+  animation: fadeIn 500ms;
   animation-fill-mode: both;
   animation-duration: 500ms;
   animation-delay: 800ms;
+  animation-timing-function: cubic-bezier(0.83, 0, 0.17, 1);
 }
 
 .Hero__information h1,
@@ -29,6 +31,7 @@
 .Hero__information h3 {
   @apply text-white;
   animation: fadeInUp 500ms both;
+  animation-timing-function: cubic-bezier(0.83, 0, 0.17, 1);
 }
 
 .Hero__information h1 {
@@ -51,6 +54,7 @@
   @apply gap-12;
   @apply mb-[60px];
   animation: fadeInUp 500ms;
+  animation-timing-function: cubic-bezier(0.83, 0, 0.17, 1);
 }
 
 .Benefits__item {
@@ -70,30 +74,5 @@
 
 .Hero__highlight {
   animation: fadeInUp 500ms;
-}
-
-.Highlight__lists {
-  @apply flex;
-  @apply gap-[10px];
-}
-
-.Highlight__item {
-  @apply flex;
-  @apply flex-none;
-  @apply items-center;
-  @apply w-[332px];
-  @apply bg-white/20;
-  @apply p-4;
-  @apply rounded-xl;
-  @apply flex-nowrap;
-}
-
-.Highlight__item div {
-  @apply p-3;
-  @apply mr-6;
-  @apply bg-white/40;
-  @apply rounded-lg;
-}
-.Highlight__item h4 {
-  @apply text-2xl text-white;
+  animation-timing-function: cubic-bezier(0.83, 0, 0.17, 1);
 }
