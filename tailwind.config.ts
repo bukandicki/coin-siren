@@ -28,6 +28,7 @@ const config: Config = {
         'cs-slate': '#344054',
         'cs-light-slate': '#24252F',
         'cs-grey': '#5E626F',
+        'cs-light-grey': '#EFF1F6',
         'cs-fog': '#FBFBFB',
       },
       backgroundImage: {
