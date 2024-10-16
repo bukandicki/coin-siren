@@ -1,3 +1,107 @@
 .Footer {
-  @apply bg-cs-fog min-h-[505px];
+  @apply bg-cs-fog min-h-[505px] pt-24 pl-[445px];
+}
+
+.Footer__wrapper {
+  @apply grid gap-y-11 gap-x-24 w-fit;
+}
+
+.Footer__about {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.Footer__benefit {
+  grid-area: 1 / 2 / 2 / 4;
+}
+
+.Footer__company {
+  @apply gap-x-3;
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.Footer__details {
+  @apply gap-x-11;
+  grid-area: 2 / 2 / 3 / 4;
+}
+
+.Footer__about p {
+  @apply max-w-[247px] mb-[18px] text-sm text-cs-dark;
+}
+
+.Footer__about strong {
+  @apply block text-[13px] text-cs-grey;
+}
+
+.Footer__about strong:first-of-type {
+  @apply mb-2;
+}
+
+.Footer__about img {
+  @apply mb-4;
+}
+
+.Footer__benefit {
+  @apply flex gap-[15px] self-start;
+}
+
+.Footer__benefit li {
+  @apply p-4 rounded-xl bg-white text-sm;
+}
+
+.Footer__benefit div {
+  @apply p-2 bg-cs-light-grey w-fit rounded-lg;
+}
+
+.Footer__benefit strong {
+  @apply block mt-3 mb-4 text-cs-dark;
+}
+
+.Footer__benefit a {
+  @apply flex gap-1 items-center text-cs-grey;
+}
+
+.Footer__company,
+.Footer__details {
+  @apply flex;
+}
+
+.Footer__company p:nth-child(1) {
+  @apply mb-[10px] text-xs text-cs-dark;
+}
+
+.Footer__company p:nth-child(2),
+.Footer__company strong {
+  @apply text-[13px] text-cs-grey whitespace-nowrap;
+}
+
+.Footer__company p:nth-child(2) {
+  @apply mb-2;
+}
+
+.Footer__details p {
+  @apply text-xs;
+}
+
+.Footer__details li:nth-child(2) p:nth-child(2) {
+  @apply text-[13px];
+}
+
+.Footer__details li *:nth-child(1) {
+  @apply text-cs-dark;
+}
+
+.Footer__details li *:not(:nth-child(1)) {
+  @apply text-cs-grey;
+}
+
+.Footer__details li *:nth-child(2) {
+  @apply mb-[5px] mt-[10px];
+}
+
+.Footer__details strong {
+  @apply block text-[13px];
+}
+
+.Footer__copyright {
+  @apply mt-12 text-[13px] text-cs-grey;
 }
