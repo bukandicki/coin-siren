@@ -1,0 +1,33 @@
+.Highlight {
+  display: flex;
+}
+
+.Highlight__lists {
+  @apply flex;
+  @apply gap-[10px];
+  @apply transition-transform;
+  @apply after:block;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+.Highlight__item {
+  @apply flex;
+  @apply flex-none;
+  @apply items-center;
+  @apply w-[332px];
+  @apply bg-white/20;
+  @apply p-4;
+  @apply rounded-xl;
+  @apply flex-nowrap;
+}
+
+.Highlight__item div {
+  @apply p-3;
+  @apply mr-6;
+  @apply bg-white/40;
+  @apply rounded-lg;
+}
+.Highlight__item h4 {
+  @apply text-2xl text-white;
+}
